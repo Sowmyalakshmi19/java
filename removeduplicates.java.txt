@@ -1,0 +1,42 @@
+ public class removeduplicates {
+public static String[] removeDuplicates(String[] elements){
+	         
+	        int j = 0;
+	        int i = 0;
+	        //return if the array length is less than 2
+	        if(elements.length < 2){
+	            return elements;
+	        }
+	        while(i < elements.length){
+	            if(elements[i] == elements[j]){
+	                i++;
+	            }
+	            else{
+	                elements[++j] = elements[i++];
+	           }    
+	        }
+			String[] output = new String[j];
+	        for(int k=0; k<output.length; k++){
+	            output[k]=elements[k];
+	        }   
+	        return output;
+	       
+	    
+}
+
+	    public static void main(String a[]){
+	    	String[] elements= {"a", "s","r","d","e","f","a"};
+	    	System.out.println("Given array elements are: ");
+	        for (int i = 0; i < elements.length; i++)
+	          {
+	                  System.out.print(elements[i]+" ");
+	          }
+	        String[] output = removeDuplicates(elements);
+	        
+	        System.out.println("\n The elements after removing duplicates are");
+			  for (int k = 0; k < output.length; k++)
+	          {
+	                 System.out.print(output[k]+" ");
+    }
+	}
+}

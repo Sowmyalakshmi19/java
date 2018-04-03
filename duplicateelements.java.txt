@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class stringadd {
+ 
+ 
+	public static void main(String[] args){
+		Scanner scan = new Scanner(System.in);
+		int i;
+ 
+		//Displaying fruits
+		System.out.print("Enter how many fruits needed: ");
+		int count = Integer.parseInt(scan.nextLine());
+ 
+		//Create a string array to store the fruits
+		String b[] = new String[count];
+		
+		
+		for (i = 0; i < b.length; i++) {
+			System.out.print("Enter the name of fruits"  + ":");
+		        b[i] = scan.nextLine();
+		        //System.out.print("Enter the name of fruits" + i + " :" + b[i] +"\n");
+		}
+		        
+		        
+		
+		for (int j = 0; j < b.length; j++)
+			
+        {
+			for (int k = 0; k < b.length; k++)
+			
+            if(  (b[j].equals (b[k]) && j!=k))
+            {
+                System.out.println("Duplicate Element is : "+b[j]);
+            }
+        }
+		
+		
+		
+    
+}    
+}
